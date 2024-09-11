@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ksk_group/themes/app_colors.dart';
+import 'package:ksk_group/core/themes/app_colors.dart';
 
 class AppThemeTextStyles extends AppTextStyles {
   AppThemeTextStyles({
@@ -39,7 +39,7 @@ class AppThemeTextStyles extends AppTextStyles {
           ),
           captionMedium: TextStyle(
             fontFamily: 'Montserrat',
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.w500,
             fontSize: 12.0,
             color: colors.textPrimary,
           ),
@@ -51,13 +51,13 @@ class AppThemeTextStyles extends AppTextStyles {
           ),
           bodyText2: TextStyle(
             fontFamily: 'Montserrat',
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.w500,
             fontSize: 16.0,
             color: colors.textPrimary,
           ),
           bodyTextMedium: TextStyle(
             fontFamily: 'Montserrat',
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.w500,
             fontSize: 14.0,
             color: colors.textPrimary,
           ),
@@ -69,7 +69,7 @@ class AppThemeTextStyles extends AppTextStyles {
           ),
           buttonSmallActive: TextStyle(
             fontFamily: 'Montserrat',
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.w600,
             fontSize: 12.0,
             color: colors.textPrimary,
           ),
