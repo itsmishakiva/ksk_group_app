@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ksk_group/core/themes/app_themes.dart';
+import 'package:ksk_group/test/test_screen.dart';
 
 void main() {
   runApp(const Application());
@@ -9,6 +11,12 @@ class Application extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    final AppThemes themes = AppThemes();
+    return MaterialApp(
+      theme: themes.lightThemeData(),
+      darkTheme: themes.darkThemeData(),
+      themeMode: ThemeMode.dark,
+      home: const TestScreen(),
+    );
   }
 }
