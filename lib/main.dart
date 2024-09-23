@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:ksk_group/router/route.dart';
 
 void main() {
-  runApp(const Application());
+  runApp(Application());
 }
 
 class Application extends StatelessWidget {
-  const Application({super.key});
-
+  Application({super.key});
+  final _approuter = AppRouter();
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp.router(
+      routerConfig: _approuter.config(),
+    );
   }
 }
