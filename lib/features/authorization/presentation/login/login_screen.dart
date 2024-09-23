@@ -43,7 +43,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 4.0),
                 Text(
-                  'Войдите в свой аккаунт\nчтобы продолжить',
+                  'Войдите в свой аккаунт,\nчтобы продолжить',
                   style: context.textStyles.captionLarge,
                 ),
                 const SizedBox(height: 18.0),

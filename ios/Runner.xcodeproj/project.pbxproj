@@ -363,10 +363,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 <<<<<<< HEAD
+<<<<<<< HEAD
 				DEVELOPMENT_TEAM = 45Y2Z5498L;
 =======
 				DEVELOPMENT_TEAM = G5KCHDM7ZA;
 >>>>>>> 9fc413e (Initial commit)
+=======
+				DEVELOPMENT_TEAM = 45Y2Z5498L;
+>>>>>>> d036bda (First authorization screen UI)
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -547,10 +551,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 <<<<<<< HEAD
+<<<<<<< HEAD
 				DEVELOPMENT_TEAM = 45Y2Z5498L;
 =======
 				DEVELOPMENT_TEAM = G5KCHDM7ZA;
 >>>>>>> 9fc413e (Initial commit)
+=======
+				DEVELOPMENT_TEAM = 45Y2Z5498L;
+>>>>>>> d036bda (First authorization screen UI)
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -574,10 +582,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 <<<<<<< HEAD
+<<<<<<< HEAD
 				DEVELOPMENT_TEAM = 45Y2Z5498L;
 =======
 				DEVELOPMENT_TEAM = G5KCHDM7ZA;
 >>>>>>> 9fc413e (Initial commit)
+=======
+				DEVELOPMENT_TEAM = 45Y2Z5498L;
+>>>>>>> d036bda (First authorization screen UI)
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
