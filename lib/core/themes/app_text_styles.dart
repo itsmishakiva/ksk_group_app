@@ -35,7 +35,6 @@ class AppThemeTextStyles extends AppTextStyles {
             fontWeight: FontWeight.w400,
             fontSize: 16.0,
             color: colors.textPrimary,
-            decoration: TextDecoration.underline,
           ),
           captionMedium: TextStyle(
             fontFamily: 'Montserrat',

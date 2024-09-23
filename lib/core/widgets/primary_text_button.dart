@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:ksk_group/core/extensions/core_context_extension.dart';
 import 'package:ksk_group/core/widgets/bounce_button.dart';
 
@@ -26,7 +29,12 @@ class PrimaryTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return BounceButton(
       disabled: state != PrimaryTextButtonState.active,
-      onTap: onTap,
+      onTap: () {
+        if (Platform.isIOS) {
+          HapticFeedback.lightImpact();
+        }
+        onTap();
+      },
       child: Container(
         height: 50.0,
         decoration: BoxDecoration(

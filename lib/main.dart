@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ksk_group/core/themes/app_themes.dart';
+import 'package:ksk_group/features/authorization/presentation/login/login_screen.dart';
 import 'package:ksk_group/test/test_screen.dart';
 
 void main() {
@@ -15,8 +16,8 @@ class Application extends StatelessWidget {
     return MaterialApp(
       theme: themes.lightThemeData(),
       darkTheme: themes.darkThemeData(),
-      themeMode: ThemeMode.dark,
-      home: const TestScreen(),
+      themeMode: ThemeMode.light,
+      home: const LoginScreen(),
     );
   }
 }
