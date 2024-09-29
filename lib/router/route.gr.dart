@@ -10,6 +10,25 @@
 part of 'route.dart';
 
 /// generated route for
+/// [AuthRootScreen]
+class AuthRootRoute extends PageRouteInfo<void> {
+  const AuthRootRoute({List<PageRouteInfo>? children})
+      : super(
+          AuthRootRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'AuthRootRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AuthRootScreen();
+    },
+  );
+}
+
+/// generated route for
 /// [ChangeEmailsScreen]
 class ChangeEmailsRoute extends PageRouteInfo<void> {
   const ChangeEmailsRoute({List<PageRouteInfo>? children})
@@ -86,6 +105,25 @@ class LoginRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [MainObjectsRootScreen]
+class MainObjectsRootRoute extends PageRouteInfo<void> {
+  const MainObjectsRootRoute({List<PageRouteInfo>? children})
+      : super(
+          MainObjectsRootRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'MainObjectsRootRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const MainObjectsRootScreen();
+    },
+  );
+}
+
+/// generated route for
 /// [ObjDetailsScreen]
 class ObjDetailsRoute extends PageRouteInfo<void> {
   const ObjDetailsRoute({List<PageRouteInfo>? children})
@@ -138,6 +176,25 @@ class RegistrationRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const RegistrationScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [SettingsRootScreen]
+class SettingsRootRoute extends PageRouteInfo<void> {
+  const SettingsRootRoute({List<PageRouteInfo>? children})
+      : super(
+          SettingsRootRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SettingsRootRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const SettingsRootScreen();
     },
   );
 }

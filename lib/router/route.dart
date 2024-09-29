@@ -9,6 +9,9 @@ import 'package:ksk_group/presentation/objects_screen.dart';
 import 'package:ksk_group/presentation/registration_screen.dart';
 import 'package:ksk_group/presentation/settings_screen.dart';
 import 'package:ksk_group/presentation/splash_screen.dart';
+import 'package:ksk_group/presentation/auth_root.dart';
+import 'package:ksk_group/presentation/main_objects_root.dart';
+import 'package:ksk_group/presentation/settings_root.dart';
 
 part 'route.gr.dart';
 
@@ -21,30 +24,48 @@ class AppRouter extends RootStackRouter {
         AutoRoute(page: SplashRoute.page, initial: true),
         AutoRoute(
           path: '/authorization',
-          page: LoginRoute.page,
+          page: AuthRootRoute.page,
           children: [
+            AutoRoute(
+              path: 'login',
+              page: LoginRoute.page,
+            ),
             AutoRoute(
               path: 'registration',
               page: RegistrationRoute.page,
             ),
             AutoRoute(
-              path: 'password',
+              path: 'change_password',
               page: ChangePassRoute.page,
             )
           ],
         ),
         AutoRoute(
           path: '/main',
-          page: ObjectsRoute.page,
+          page: MainObjectsRootRoute.page,
           children: [
             AutoRoute(
-              path: 'details',
-              page: ObjDetailsRoute.page,
+              path: '/objects',
+              page: ObjectsRoute.page,
+              children: [
+                AutoRoute(
+                  path: 'list_objects',
+                  page: ObjectsRoute.page,
+                ),
+                AutoRoute(
+                  path: 'details',
+                  page: ObjDetailsRoute.page,
+                ),
+              ],
             ),
             AutoRoute(
               path: '/settings',
-              page: SettingsRoute.page,
+              page: SettingsRootRoute.page,
               children: [
+                AutoRoute(
+                  path: 'settings',
+                  page: SettingsRoute.page,
+                ),
                 AutoRoute(
                   path: 'email',
                   page: ChangeEmailsRoute.page,
