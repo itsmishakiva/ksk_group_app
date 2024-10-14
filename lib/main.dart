@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:ksk_group/router/route.dart';
 import 'package:ksk_group/core/themes/app_themes.dart';
-import 'package:ksk_group/features/authorization/presentation/login/login_screen.dart';
-import 'package:ksk_group/test/test_screen.dart';
 
 void main() {
-  runApp(const Application());
+  runApp(Application());
 }
 
 class Application extends StatelessWidget {
-  const Application({super.key});
-
+  Application({super.key});
+  final _approuter = AppRouter();
   @override
   Widget build(BuildContext context) {
     final AppThemes themes = AppThemes();
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: _approuter.config(),
       theme: themes.lightThemeData(),
       darkTheme: themes.darkThemeData(),
       themeMode: ThemeMode.light,
-      home: const LoginScreen(),
     );
   }
 }
