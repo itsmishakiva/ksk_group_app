@@ -3,10 +3,7 @@ import 'package:ksk_group/features/authorization/domain/bloc/login/events/login_
 import 'package:ksk_group/features/authorization/domain/bloc/login/states/login_state.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
-  LoginBloc()
-      : super(
-          const LoginStateData(email: '', password: ''),
-        ) {
+  LoginBloc() : super(const LoginStateData(email: '', password: '')) {
     on<LoginEventProceed>(_proceed);
   }
 

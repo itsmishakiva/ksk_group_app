@@ -1,19 +1,9 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
-import 'package:ksk_group/presentation/change_email_screen.dart';
-import 'package:ksk_group/presentation/recover_pass_screen.dart';
-import 'package:ksk_group/presentation/change_pass_screen.dart';
-import 'package:ksk_group/presentation/login_screen.dart';
-import 'package:ksk_group/presentation/objects_details_screen.dart';
-import 'package:ksk_group/presentation/objects_screen.dart';
-import 'package:ksk_group/presentation/registration_screen.dart';
-import 'package:ksk_group/presentation/settings_screen.dart';
-import 'package:ksk_group/presentation/splash_screen.dart';
-import 'package:ksk_group/presentation/auth_root.dart';
-import 'package:ksk_group/presentation/main_objects_root.dart';
-import 'package:ksk_group/presentation/settings_root.dart';
+import 'package:ksk_group/features/authorization/presentation/auth_root_route.dart';
+import 'package:ksk_group/features/authorization/presentation/login/login_screen.dart';
+import 'package:ksk_group/features/authorization/presentation/sign_up/sign_up_screen.dart';
 
-part 'route.gr.dart';
+part 'app_router.gr.dart';
 
 @AutoRouterConfig(
   replaceInRouteName: 'Screen,Route',
@@ -21,26 +11,28 @@ part 'route.gr.dart';
 class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
-        AutoRoute(page: SplashRoute.page, initial: true),
+        //AutoRoute(page: SplashRoute.page, initial: true),
         AutoRoute(
+          initial: true,
           path: '/authorization',
           page: AuthRootRoute.page,
           children: [
             AutoRoute(
+              initial: true,
               path: 'login',
               page: LoginRoute.page,
             ),
             AutoRoute(
-              path: 'registration',
-              page: RegistrationRoute.page,
+              path: 'sign_up',
+              page: SignUpRoute.page,
             ),
-            AutoRoute(
+            /*AutoRoute(
               path: 'change_password',
               page: ChangePassRoute.page,
-            )
+            )*/
           ],
         ),
-        AutoRoute(
+        /*AutoRoute(
           path: '/main',
           page: MainObjectsRootRoute.page,
           children: [
@@ -77,6 +69,6 @@ class AppRouter extends RootStackRouter {
               ],
             )
           ],
-        )
+        )*/
       ];
 }

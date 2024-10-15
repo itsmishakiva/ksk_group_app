@@ -1,11 +1,16 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ksk_group/core/extensions/core_context_extension.dart';
 import 'package:ksk_group/core/widgets/app_scaffold.dart';
 import 'package:ksk_group/core/widgets/app_text_field.dart';
 import 'package:ksk_group/core/widgets/primary_text_button.dart';
-import 'package:ksk_group/features/authorization/presentation/sign_up/sign_up_screen.dart';
+import 'package:ksk_group/router/app_router.dart';
 
+part 'widgets/forgot_password_button.dart';
+part 'widgets/sign_up_button.dart';
+
+@RoutePage()
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
@@ -57,71 +62,6 @@ class LoginScreen extends StatelessWidget {
                   onTap: () {},
                 ),
                 const SizedBox(height: 16.0),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _ForgotPasswordButton extends StatelessWidget {
-  const _ForgotPasswordButton();
-
-  @override
-  Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.centerRight,
-      child: GestureDetector(
-        child: Material(
-          color: Colors.transparent,
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(8.0, 8.0, 2.0, 8.0),
-            child: Text(
-              'Забыли пароль?',
-              style: context.textStyles.caption.copyWith(
-                color: context.colors.textSecondary,
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _SignUpButton extends StatelessWidget {
-  const _SignUpButton();
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      //TODO replace with router
-      onTap: () {
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (context) => const SignUpScreen(),
-          ),
-        );
-      },
-      child: Material(
-        color: Colors.transparent,
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(0.0, 8.0, 8.0, 8.0),
-          child: RichText(
-            text: TextSpan(
-              text: 'Еще нет аккаунта? ',
-              style: context.textStyles.caption.copyWith(
-                color: context.colors.textSecondary,
-              ),
-              children: [
-                TextSpan(
-                  text: 'Регистрация',
-                  style: context.textStyles.captionActive.copyWith(
-                    color: context.colors.textPrimary,
-                  ),
-                ),
               ],
             ),
           ),

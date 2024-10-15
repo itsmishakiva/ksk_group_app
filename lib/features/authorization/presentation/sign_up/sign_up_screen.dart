@@ -1,11 +1,15 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ksk_group/core/extensions/core_context_extension.dart';
 import 'package:ksk_group/core/widgets/app_scaffold.dart';
 import 'package:ksk_group/core/widgets/app_text_field.dart';
 import 'package:ksk_group/core/widgets/primary_text_button.dart';
-import 'package:ksk_group/features/authorization/presentation/login/login_screen.dart';
+import 'package:ksk_group/router/app_router.dart';
 
+part 'widgets/sign_in_button.dart';
+
+@RoutePage()
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
 
@@ -55,53 +59,13 @@ class SignUpScreen extends StatelessWidget {
                   obscureText: true,
                 ),
                 const SizedBox(height: 10.0),
-                const _SignUpButton(),
+                const _SignInButton(),
                 const Spacer(),
                 PrimaryTextButton(
                   text: 'Продолжить',
                   onTap: () {},
                 ),
                 const SizedBox(height: 16.0),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _SignUpButton extends StatelessWidget {
-  const _SignUpButton();
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        //TODO replace with router
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (context) => const LoginScreen(),
-          ),
-        );
-      },
-      child: Material(
-        color: Colors.transparent,
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(0.0, 8.0, 8.0, 8.0),
-          child: RichText(
-            text: TextSpan(
-              text: 'Уже есть аккаунт? ',
-              style: context.textStyles.caption.copyWith(
-                color: context.colors.textSecondary,
-              ),
-              children: [
-                TextSpan(
-                  text: 'Войти',
-                  style: context.textStyles.captionActive.copyWith(
-                    color: context.colors.textPrimary,
-                  ),
-                ),
               ],
             ),
           ),
