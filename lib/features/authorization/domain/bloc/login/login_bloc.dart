@@ -7,5 +7,8 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     on<LoginEventProceed>(_proceed);
   }
 
-  void _proceed(LoginEventProceed event, Emitter<LoginState> emit) {}
+  void _proceed(
+    LoginEventProceed event,
+    Emitter<LoginState> emit,
+  ) async {}
 }
