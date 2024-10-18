@@ -1,18 +1,16 @@
-class SignUpDto {
-  final String email;
-  final String password;
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-  SignUpDto({
-    required this.email,
-    required this.password,
-  });
+part 'sign_up_dto.freezed.dart';
 
-  SignUpDto.fromJson(
-    Map<String, dynamic> json,
-  )   : email = json['email'],
-        password = json['password'];
+part 'sign_up_dto.g.dart';
 
-  Map<String, dynamic> toJson() {
-    return {'email': email, 'password': password};
-  }
+@freezed
+class SignUpDto with _$SignUpDto {
+  const factory SignUpDto({
+    required String email,
+    required String password,
+  }) = _SignUpDto;
+
+  factory SignUpDto.fromJson(Map<String, Object?> json) =>
+      _$SignUpDtoFromJson(json);
 }

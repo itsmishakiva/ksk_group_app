@@ -1,15 +1,18 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ksk_group/core/extensions/core_context_extension.dart';
 import 'package:ksk_group/core/widgets/app_scaffold.dart';
 import 'package:ksk_group/core/widgets/app_text_field.dart';
 import 'package:ksk_group/core/widgets/primary_text_button.dart';
+import 'package:ksk_group/features/authorization/domain/bloc/sign_up/event/sign_up_event.dart';
+import 'package:ksk_group/features/authorization/domain/bloc/sign_up/sign_up_bloc.dart';
+import 'package:ksk_group/features/authorization/domain/bloc/sign_up/state/sign_up_state.dart';
 import 'package:ksk_group/router/app_router.dart';
 
 part 'widgets/sign_in_button.dart';
 
-@RoutePage()
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
 
@@ -42,28 +45,85 @@ class SignUpScreen extends StatelessWidget {
                   style: context.textStyles.captionLarge,
                 ),
                 const SizedBox(height: 18.0),
-                const AppTextField(
-                  label: 'Ваш email',
-                  hint: 'Введите email',
+                BlocBuilder<SignUpBloc, SignUpState>(
+                  builder: (context, state) {
+                    return AppTextField(
+                      label: 'Ваш email',
+                      hint: 'Введите email',
+                      errorMessage: state is SignUpStateError
+                          ? state.emailErrorMessage
+                          : null,
+                      onChanged: (value) {
+                        context.read<SignUpBloc>().add(
+                              SignUpEventUpdateParams(
+                                email: value,
+                              ),
+                            );
+                      },
+                    );
+                  },
                 ),
                 const SizedBox(height: 18.0),
-                const AppTextField(
-                  label: 'Ваш пароль',
-                  hint: 'Введите пароль',
-                  obscureText: true,
+                BlocBuilder<SignUpBloc, SignUpState>(
+                  builder: (context, state) {
+                    return AppTextField(
+                      label: 'Ваш пароль',
+                      hint: 'Введите пароль',
+                      errorMessage: state is SignUpStateError
+                          ? state.passwordsErrorMessage
+                          : null,
+                      obscureText: true,
+                      onChanged: (value) {
+                        context.read<SignUpBloc>().add(
+                              SignUpEventUpdateParams(
+                                password: value,
+                              ),
+                            );
+                      },
+                    );
+                  },
                 ),
                 const SizedBox(height: 18.0),
-                const AppTextField(
-                  label: 'Повторите пароль',
-                  hint: 'Введите пароль еще раз',
-                  obscureText: true,
+                BlocBuilder<SignUpBloc, SignUpState>(
+                  builder: (context, state) {
+                    return AppTextField(
+                      label: 'Повторите пароль',
+                      hint: 'Введите пароль еще раз',
+                      errorMessage: state is SignUpStateError
+                          ? state.passwordsErrorMessage
+                          : null,
+                      obscureText: true,
+                      onChanged: (value) {
+                        context.read<SignUpBloc>().add(
+                              SignUpEventUpdateParams(
+                                repeatPassword: value,
+                              ),
+                            );
+                      },
+                    );
+                  },
                 ),
                 const SizedBox(height: 10.0),
                 const _SignInButton(),
                 const Spacer(),
-                PrimaryTextButton(
-                  text: 'Продолжить',
-                  onTap: () {},
+                BlocBuilder<SignUpBloc, SignUpState>(
+                  builder: (context, state) {
+                    return PrimaryTextButton(
+                      text: 'Продолжить',
+                      state: state is SignUpStateLoading
+                          ? PrimaryTextButtonState.loading
+                          : (state.email.isEmpty ||
+                                  state.password.isEmpty ||
+                                  state.passwordRepeat.isEmpty
+                              ? PrimaryTextButtonState.disabled
+                              : PrimaryTextButtonState.active),
+                      onTap: () {
+                        context.read<SignUpBloc>().add(
+                              const SignUpEventProceed(),
+                            );
+                      },
+                    );
+                  },
                 ),
                 const SizedBox(height: 16.0),
               ],

@@ -9,6 +9,7 @@ class AppTextField extends StatelessWidget {
     this.controller,
     this.obscureText = false,
     this.errorMessage,
+    this.onChanged,
   });
 
   final String label;
@@ -17,6 +18,7 @@ class AppTextField extends StatelessWidget {
   final bool obscureText;
   final String? errorMessage;
   static const _animationDuration = Duration(milliseconds: 200);
+  final void Function(String value)? onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -49,6 +51,7 @@ class AppTextField extends StatelessWidget {
                   ),
           ),
           child: TextField(
+            onChanged: onChanged,
             obscureText: obscureText,
             cursorWidth: 1.0,
             style: context.textStyles.hint,

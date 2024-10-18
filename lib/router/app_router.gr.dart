@@ -48,7 +48,7 @@ class LoginRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [SignUpScreen]
+/// [SignUpProvider]
 class SignUpRoute extends PageRouteInfo<void> {
   const SignUpRoute({List<PageRouteInfo>? children})
       : super(
@@ -61,7 +61,7 @@ class SignUpRoute extends PageRouteInfo<void> {
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const SignUpScreen();
+      return const SignUpProvider();
     },
   );
 }
