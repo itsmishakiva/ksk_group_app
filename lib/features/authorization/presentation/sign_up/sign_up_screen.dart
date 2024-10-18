@@ -13,7 +13,6 @@ import 'package:ksk_group/router/app_router.dart';
 
 part 'widgets/sign_in_button.dart';
 
-@RoutePage()
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
 
