@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
@@ -21,8 +23,15 @@ class DefaultAuthorizationDao implements AuthorizationDao {
         signUpData.toJson(),
       ),
     );
-    print(response.data);
-    print(response.headers);
-    print(response.statusCode);
+  }
+
+  @override
+  Future<void> logIn({required SignUpDto signUpData}) async {
+    final response = await _dio.post(
+      'api/auth/log',
+      data: jsonEncode(
+        signUpData.toJson(),
+      ),
+    );
   }
 }

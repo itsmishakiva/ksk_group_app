@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ksk_group/core/extensions/core_context_extension.dart';
 import 'package:ksk_group/features/authorization/data/dao/default_authorization_dao.dart';
 import 'package:ksk_group/features/authorization/data/mapper/authorization_mapper.dart';
+import 'package:ksk_group/features/authorization/data/mapper/log_in_mapper.dart';
 import 'package:ksk_group/features/authorization/domain/bloc/sign_up/sign_up_bloc.dart';
 import 'package:ksk_group/features/authorization/domain/repository/default_authorization_repository.dart';
 import 'package:ksk_group/features/authorization/presentation/sign_up/sign_up_screen.dart';
@@ -19,6 +20,7 @@ class SignUpProvider extends StatelessWidget {
         repository: DefaultAuthorizationRepository(
           dao: DefaultAuthorizationDao(dio: context.dio),
           mapper: AuthorizationMapper(),
+          inMapper: LogInMapper(),
         ),
       ),
       child: const SignUpScreen(),

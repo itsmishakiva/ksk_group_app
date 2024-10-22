@@ -4,4 +4,8 @@ abstract interface class AuthorizationDao {
   Future<void> signUp({
     required SignUpDto signUpData,
   });
+
+  Future<void> logIn({
+    required SignUpDto signUpData,
+  });
 }
