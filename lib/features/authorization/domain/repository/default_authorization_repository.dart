@@ -4,6 +4,8 @@ import 'package:ksk_group/features/authorization/data/mapper/authorization_mappe
 import 'package:ksk_group/features/authorization/data/mapper/log_in_mapper.dart';
 import 'package:ksk_group/features/authorization/domain/entities/log_in_entity.dart';
 import 'package:ksk_group/features/authorization/data/mapper/authorization_mapper.dart';
+import 'package:ksk_group/features/authorization/data/mapper/log_in_mapper.dart';
+import 'package:ksk_group/features/authorization/domain/entities/log_in_entity.dart';
 import 'package:ksk_group/features/authorization/domain/entities/sign_up_entity.dart';
 import 'package:ksk_group/features/authorization/domain/repository/authorization_repository.dart';
 
