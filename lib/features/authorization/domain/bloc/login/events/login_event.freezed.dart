@@ -19,32 +19,38 @@ mixin _$LoginEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() proceed,
+    required TResult Function(String? email, String? password) updateParams,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? proceed,
+    TResult? Function(String? email, String? password)? updateParams,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? proceed,
+    TResult Function(String? email, String? password)? updateParams,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(LoginEventProceed value) proceed,
+    required TResult Function(LoginEventUpdateParams value) updateParams,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(LoginEventProceed value)? proceed,
+    TResult? Function(LoginEventUpdateParams value)? updateParams,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(LoginEventProceed value)? proceed,
+    TResult Function(LoginEventUpdateParams value)? updateParams,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -107,6 +113,7 @@ class _$LoginEventProceedImpl implements LoginEventProceed {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() proceed,
+    required TResult Function(String? email, String? password) updateParams,
   }) {
     return proceed();
   }
@@ -115,6 +122,7 @@ class _$LoginEventProceedImpl implements LoginEventProceed {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? proceed,
+    TResult? Function(String? email, String? password)? updateParams,
   }) {
     return proceed?.call();
   }
@@ -123,6 +131,7 @@ class _$LoginEventProceedImpl implements LoginEventProceed {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? proceed,
+    TResult Function(String? email, String? password)? updateParams,
     required TResult orElse(),
   }) {
     if (proceed != null) {
@@ -135,6 +144,7 @@ class _$LoginEventProceedImpl implements LoginEventProceed {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(LoginEventProceed value) proceed,
+    required TResult Function(LoginEventUpdateParams value) updateParams,
   }) {
     return proceed(this);
   }
@@ -143,6 +153,7 @@ class _$LoginEventProceedImpl implements LoginEventProceed {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(LoginEventProceed value)? proceed,
+    TResult? Function(LoginEventUpdateParams value)? updateParams,
   }) {
     return proceed?.call(this);
   }
@@ -151,6 +162,7 @@ class _$LoginEventProceedImpl implements LoginEventProceed {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(LoginEventProceed value)? proceed,
+    TResult Function(LoginEventUpdateParams value)? updateParams,
     required TResult orElse(),
   }) {
     if (proceed != null) {
@@ -162,4 +174,152 @@ class _$LoginEventProceedImpl implements LoginEventProceed {
 
 abstract class LoginEventProceed implements LoginEvent {
   const factory LoginEventProceed() = _$LoginEventProceedImpl;
+}
+
+/// @nodoc
+abstract class _$$LoginEventUpdateParamsImplCopyWith<$Res> {
+  factory _$$LoginEventUpdateParamsImplCopyWith(
+          _$LoginEventUpdateParamsImpl value,
+          $Res Function(_$LoginEventUpdateParamsImpl) then) =
+      __$$LoginEventUpdateParamsImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String? email, String? password});
+}
+
+/// @nodoc
+class __$$LoginEventUpdateParamsImplCopyWithImpl<$Res>
+    extends _$LoginEventCopyWithImpl<$Res, _$LoginEventUpdateParamsImpl>
+    implements _$$LoginEventUpdateParamsImplCopyWith<$Res> {
+  __$$LoginEventUpdateParamsImplCopyWithImpl(
+      _$LoginEventUpdateParamsImpl _value,
+      $Res Function(_$LoginEventUpdateParamsImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? email = freezed,
+    Object? password = freezed,
+  }) {
+    return _then(_$LoginEventUpdateParamsImpl(
+      email: freezed == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+      password: freezed == password
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LoginEventUpdateParamsImpl implements LoginEventUpdateParams {
+  const _$LoginEventUpdateParamsImpl({this.email, this.password});
+
+  @override
+  final String? email;
+  @override
+  final String? password;
+
+  @override
+  String toString() {
+    return 'LoginEvent.updateParams(email: $email, password: $password)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoginEventUpdateParamsImpl &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.password, password) ||
+                other.password == password));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, email, password);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LoginEventUpdateParamsImplCopyWith<_$LoginEventUpdateParamsImpl>
+      get copyWith => __$$LoginEventUpdateParamsImplCopyWithImpl<
+          _$LoginEventUpdateParamsImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() proceed,
+    required TResult Function(String? email, String? password) updateParams,
+  }) {
+    return updateParams(email, password);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? proceed,
+    TResult? Function(String? email, String? password)? updateParams,
+  }) {
+    return updateParams?.call(email, password);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? proceed,
+    TResult Function(String? email, String? password)? updateParams,
+    required TResult orElse(),
+  }) {
+    if (updateParams != null) {
+      return updateParams(email, password);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(LoginEventProceed value) proceed,
+    required TResult Function(LoginEventUpdateParams value) updateParams,
+  }) {
+    return updateParams(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(LoginEventProceed value)? proceed,
+    TResult? Function(LoginEventUpdateParams value)? updateParams,
+  }) {
+    return updateParams?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(LoginEventProceed value)? proceed,
+    TResult Function(LoginEventUpdateParams value)? updateParams,
+    required TResult orElse(),
+  }) {
+    if (updateParams != null) {
+      return updateParams(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LoginEventUpdateParams implements LoginEvent {
+  const factory LoginEventUpdateParams(
+      {final String? email,
+      final String? password}) = _$LoginEventUpdateParamsImpl;
+
+  String? get email;
+  String? get password;
+  @JsonKey(ignore: true)
+  _$$LoginEventUpdateParamsImplCopyWith<_$LoginEventUpdateParamsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

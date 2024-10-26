@@ -1,10 +1,14 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ksk_group/core/extensions/core_context_extension.dart';
 import 'package:ksk_group/core/widgets/app_scaffold.dart';
 import 'package:ksk_group/core/widgets/app_text_field.dart';
 import 'package:ksk_group/core/widgets/primary_text_button.dart';
+import 'package:ksk_group/features/authorization/domain/bloc/login/events/login_event.dart';
+import 'package:ksk_group/features/authorization/domain/bloc/login/login_bloc.dart';
+import 'package:ksk_group/features/authorization/domain/bloc/login/states/login_state.dart';
 import 'package:ksk_group/router/app_router.dart';
 
 part 'widgets/forgot_password_button.dart';
@@ -48,18 +52,45 @@ class LoginScreen extends StatelessWidget {
                   hint: 'Введите email',
                 ),
                 const SizedBox(height: 18.0),
-                const AppTextField(
-                  label: 'Ваш пароль',
-                  hint: 'Введите пароль',
-                  obscureText: true,
+                BlocBuilder<LoginBloc, LoginState>(
+                  builder: (context, state) {
+                    return AppTextField(
+                      label: 'Ваш пароль',
+                      hint: 'Введите пароль',
+                      obscureText: true,
+                      errorMessage: state is LoginStateError
+                          ? state.passwordErrorMessage
+                          : null,
+                      onChanged: (value) {
+                        context.read<LoginBloc>().add(
+                              LoginEvent.updateParams(
+                                password: value,
+                              ),
+                            );
+                      },
+                    );
+                  },
                 ),
                 const _ForgotPasswordButton(),
                 const SizedBox(height: 10.0),
                 const _SignUpButton(),
                 const Spacer(),
-                PrimaryTextButton(
-                  text: 'Продолжить',
-                  onTap: () {},
+                BlocBuilder<LoginBloc, LoginState>(
+                  builder: (context, state) {
+                    return PrimaryTextButton(
+                      text: 'Продолжить',
+                      state: state is LoginStateLoading
+                          ? PrimaryTextButtonState.loading
+                          : (state.email.isEmpty || state.password.isEmpty
+                              ? PrimaryTextButtonState.disabled
+                              : PrimaryTextButtonState.active),
+                      onTap: () {
+                        context.read<LoginBloc>().add(
+                              const LoginEvent.proceed(),
+                            );
+                      },
+                    );
+                  },
                 ),
                 const SizedBox(height: 16.0),
               ],

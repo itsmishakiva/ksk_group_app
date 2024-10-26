@@ -25,6 +25,7 @@ mixin _$LoginState {
             String? emailErrorMessage, String? passwordErrorMessage)
         error,
     required TResult Function(String email, String password) loading,
+    required TResult Function(String email, String password) success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,6 +35,7 @@ mixin _$LoginState {
             String? passwordErrorMessage)?
         error,
     TResult? Function(String email, String password)? loading,
+    TResult? Function(String email, String password)? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -43,6 +45,7 @@ mixin _$LoginState {
             String? passwordErrorMessage)?
         error,
     TResult Function(String email, String password)? loading,
+    TResult Function(String email, String password)? success,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -51,6 +54,7 @@ mixin _$LoginState {
     required TResult Function(LoginStateData value) data,
     required TResult Function(LoginStateError value) error,
     required TResult Function(LoginStateLoading value) loading,
+    required TResult Function(LoginStateSuccess value) success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -58,6 +62,7 @@ mixin _$LoginState {
     TResult? Function(LoginStateData value)? data,
     TResult? Function(LoginStateError value)? error,
     TResult? Function(LoginStateLoading value)? loading,
+    TResult? Function(LoginStateSuccess value)? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,6 +70,7 @@ mixin _$LoginState {
     TResult Function(LoginStateData value)? data,
     TResult Function(LoginStateError value)? error,
     TResult Function(LoginStateLoading value)? loading,
+    TResult Function(LoginStateSuccess value)? success,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -193,6 +199,7 @@ class _$LoginStateDataImpl implements LoginStateData {
             String? emailErrorMessage, String? passwordErrorMessage)
         error,
     required TResult Function(String email, String password) loading,
+    required TResult Function(String email, String password) success,
   }) {
     return data(email, password);
   }
@@ -205,6 +212,7 @@ class _$LoginStateDataImpl implements LoginStateData {
             String? passwordErrorMessage)?
         error,
     TResult? Function(String email, String password)? loading,
+    TResult? Function(String email, String password)? success,
   }) {
     return data?.call(email, password);
   }
@@ -217,6 +225,7 @@ class _$LoginStateDataImpl implements LoginStateData {
             String? passwordErrorMessage)?
         error,
     TResult Function(String email, String password)? loading,
+    TResult Function(String email, String password)? success,
     required TResult orElse(),
   }) {
     if (data != null) {
@@ -231,6 +240,7 @@ class _$LoginStateDataImpl implements LoginStateData {
     required TResult Function(LoginStateData value) data,
     required TResult Function(LoginStateError value) error,
     required TResult Function(LoginStateLoading value) loading,
+    required TResult Function(LoginStateSuccess value) success,
   }) {
     return data(this);
   }
@@ -241,6 +251,7 @@ class _$LoginStateDataImpl implements LoginStateData {
     TResult? Function(LoginStateData value)? data,
     TResult? Function(LoginStateError value)? error,
     TResult? Function(LoginStateLoading value)? loading,
+    TResult? Function(LoginStateSuccess value)? success,
   }) {
     return data?.call(this);
   }
@@ -251,6 +262,7 @@ class _$LoginStateDataImpl implements LoginStateData {
     TResult Function(LoginStateData value)? data,
     TResult Function(LoginStateError value)? error,
     TResult Function(LoginStateLoading value)? loading,
+    TResult Function(LoginStateSuccess value)? success,
     required TResult orElse(),
   }) {
     if (data != null) {
@@ -383,6 +395,7 @@ class _$LoginStateErrorImpl implements LoginStateError {
             String? emailErrorMessage, String? passwordErrorMessage)
         error,
     required TResult Function(String email, String password) loading,
+    required TResult Function(String email, String password) success,
   }) {
     return error(email, password, emailErrorMessage, passwordErrorMessage);
   }
@@ -395,6 +408,7 @@ class _$LoginStateErrorImpl implements LoginStateError {
             String? passwordErrorMessage)?
         error,
     TResult? Function(String email, String password)? loading,
+    TResult? Function(String email, String password)? success,
   }) {
     return error?.call(
         email, password, emailErrorMessage, passwordErrorMessage);
@@ -408,6 +422,7 @@ class _$LoginStateErrorImpl implements LoginStateError {
             String? passwordErrorMessage)?
         error,
     TResult Function(String email, String password)? loading,
+    TResult Function(String email, String password)? success,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -422,6 +437,7 @@ class _$LoginStateErrorImpl implements LoginStateError {
     required TResult Function(LoginStateData value) data,
     required TResult Function(LoginStateError value) error,
     required TResult Function(LoginStateLoading value) loading,
+    required TResult Function(LoginStateSuccess value) success,
   }) {
     return error(this);
   }
@@ -432,6 +448,7 @@ class _$LoginStateErrorImpl implements LoginStateError {
     TResult? Function(LoginStateData value)? data,
     TResult? Function(LoginStateError value)? error,
     TResult? Function(LoginStateLoading value)? loading,
+    TResult? Function(LoginStateSuccess value)? success,
   }) {
     return error?.call(this);
   }
@@ -442,6 +459,7 @@ class _$LoginStateErrorImpl implements LoginStateError {
     TResult Function(LoginStateData value)? data,
     TResult Function(LoginStateError value)? error,
     TResult Function(LoginStateLoading value)? loading,
+    TResult Function(LoginStateSuccess value)? success,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -551,6 +569,7 @@ class _$LoginStateLoadingImpl implements LoginStateLoading {
             String? emailErrorMessage, String? passwordErrorMessage)
         error,
     required TResult Function(String email, String password) loading,
+    required TResult Function(String email, String password) success,
   }) {
     return loading(email, password);
   }
@@ -563,6 +582,7 @@ class _$LoginStateLoadingImpl implements LoginStateLoading {
             String? passwordErrorMessage)?
         error,
     TResult? Function(String email, String password)? loading,
+    TResult? Function(String email, String password)? success,
   }) {
     return loading?.call(email, password);
   }
@@ -575,6 +595,7 @@ class _$LoginStateLoadingImpl implements LoginStateLoading {
             String? passwordErrorMessage)?
         error,
     TResult Function(String email, String password)? loading,
+    TResult Function(String email, String password)? success,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -589,6 +610,7 @@ class _$LoginStateLoadingImpl implements LoginStateLoading {
     required TResult Function(LoginStateData value) data,
     required TResult Function(LoginStateError value) error,
     required TResult Function(LoginStateLoading value) loading,
+    required TResult Function(LoginStateSuccess value) success,
   }) {
     return loading(this);
   }
@@ -599,6 +621,7 @@ class _$LoginStateLoadingImpl implements LoginStateLoading {
     TResult? Function(LoginStateData value)? data,
     TResult? Function(LoginStateError value)? error,
     TResult? Function(LoginStateLoading value)? loading,
+    TResult? Function(LoginStateSuccess value)? success,
   }) {
     return loading?.call(this);
   }
@@ -609,6 +632,7 @@ class _$LoginStateLoadingImpl implements LoginStateLoading {
     TResult Function(LoginStateData value)? data,
     TResult Function(LoginStateError value)? error,
     TResult Function(LoginStateLoading value)? loading,
+    TResult Function(LoginStateSuccess value)? success,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -630,5 +654,174 @@ abstract class LoginStateLoading implements LoginState {
   @override
   @JsonKey(ignore: true)
   _$$LoginStateLoadingImplCopyWith<_$LoginStateLoadingImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoginStateSuccessImplCopyWith<$Res>
+    implements $LoginStateCopyWith<$Res> {
+  factory _$$LoginStateSuccessImplCopyWith(_$LoginStateSuccessImpl value,
+          $Res Function(_$LoginStateSuccessImpl) then) =
+      __$$LoginStateSuccessImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String email, String password});
+}
+
+/// @nodoc
+class __$$LoginStateSuccessImplCopyWithImpl<$Res>
+    extends _$LoginStateCopyWithImpl<$Res, _$LoginStateSuccessImpl>
+    implements _$$LoginStateSuccessImplCopyWith<$Res> {
+  __$$LoginStateSuccessImplCopyWithImpl(_$LoginStateSuccessImpl _value,
+      $Res Function(_$LoginStateSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? email = null,
+    Object? password = null,
+  }) {
+    return _then(_$LoginStateSuccessImpl(
+      email: null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: null == password
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LoginStateSuccessImpl implements LoginStateSuccess {
+  const _$LoginStateSuccessImpl({required this.email, required this.password});
+
+  @override
+  final String email;
+  @override
+  final String password;
+
+  @override
+  String toString() {
+    return 'LoginState.success(email: $email, password: $password)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoginStateSuccessImpl &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.password, password) ||
+                other.password == password));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, email, password);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LoginStateSuccessImplCopyWith<_$LoginStateSuccessImpl> get copyWith =>
+      __$$LoginStateSuccessImplCopyWithImpl<_$LoginStateSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String email, String password) data,
+    required TResult Function(String email, String password,
+            String? emailErrorMessage, String? passwordErrorMessage)
+        error,
+    required TResult Function(String email, String password) loading,
+    required TResult Function(String email, String password) success,
+  }) {
+    return success(email, password);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String email, String password)? data,
+    TResult? Function(String email, String password, String? emailErrorMessage,
+            String? passwordErrorMessage)?
+        error,
+    TResult? Function(String email, String password)? loading,
+    TResult? Function(String email, String password)? success,
+  }) {
+    return success?.call(email, password);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String email, String password)? data,
+    TResult Function(String email, String password, String? emailErrorMessage,
+            String? passwordErrorMessage)?
+        error,
+    TResult Function(String email, String password)? loading,
+    TResult Function(String email, String password)? success,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(email, password);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(LoginStateData value) data,
+    required TResult Function(LoginStateError value) error,
+    required TResult Function(LoginStateLoading value) loading,
+    required TResult Function(LoginStateSuccess value) success,
+  }) {
+    return success(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(LoginStateData value)? data,
+    TResult? Function(LoginStateError value)? error,
+    TResult? Function(LoginStateLoading value)? loading,
+    TResult? Function(LoginStateSuccess value)? success,
+  }) {
+    return success?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(LoginStateData value)? data,
+    TResult Function(LoginStateError value)? error,
+    TResult Function(LoginStateLoading value)? loading,
+    TResult Function(LoginStateSuccess value)? success,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LoginStateSuccess implements LoginState {
+  const factory LoginStateSuccess(
+      {required final String email,
+      required final String password}) = _$LoginStateSuccessImpl;
+
+  @override
+  String get email;
+  @override
+  String get password;
+  @override
+  @JsonKey(ignore: true)
+  _$$LoginStateSuccessImplCopyWith<_$LoginStateSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -28,7 +28,7 @@ class DefaultAuthorizationDao implements AuthorizationDao {
   @override
   Future<void> logIn({required SignUpDto signUpData}) async {
     final response = await _dio.post(
-      'api/auth/log',
+      'api/auth/signIn',
       data: jsonEncode(
         signUpData.toJson(),
       ),

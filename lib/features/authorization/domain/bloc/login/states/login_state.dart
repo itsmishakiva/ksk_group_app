@@ -20,4 +20,9 @@ sealed class LoginState with _$LoginState {
     required String email,
     required String password,
   }) = LoginStateLoading;
+
+  const factory LoginState.success({
+    required String email,
+    required String password,
+  }) = LoginStateSuccess;
 }

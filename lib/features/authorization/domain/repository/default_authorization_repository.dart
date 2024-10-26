@@ -1,4 +1,5 @@
 import 'package:ksk_group/features/authorization/data/dao/authorization_dao.dart';
+import 'package:ksk_group/features/authorization/data/dto/sign_up_dto.dart';
 import 'package:ksk_group/features/authorization/data/mapper/authorization_mapper.dart';
 import 'package:ksk_group/features/authorization/data/mapper/log_in_mapper.dart';
 import 'package:ksk_group/features/authorization/domain/entities/log_in_entity.dart';
