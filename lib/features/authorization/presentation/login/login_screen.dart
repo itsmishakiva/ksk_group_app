@@ -14,7 +14,6 @@ import 'package:ksk_group/router/app_router.dart';
 part 'widgets/forgot_password_button.dart';
 part 'widgets/sign_up_button.dart';
 
-@RoutePage()
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 

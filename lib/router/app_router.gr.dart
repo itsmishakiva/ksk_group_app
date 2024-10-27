@@ -29,7 +29,7 @@ class AuthRootRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [LoginScreen]
+/// [LoginProvider]
 class LoginRoute extends PageRouteInfo<void> {
   const LoginRoute({List<PageRouteInfo>? children})
       : super(
@@ -42,7 +42,7 @@ class LoginRoute extends PageRouteInfo<void> {
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const LoginScreen();
+      return const LoginProvider();
     },
   );
 }

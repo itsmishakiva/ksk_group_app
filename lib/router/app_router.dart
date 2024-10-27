@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:ksk_group/features/authorization/presentation/auth_root_route.dart';
+import 'package:ksk_group/features/authorization/presentation/login/login_provider.dart';
 import 'package:ksk_group/features/authorization/presentation/login/login_screen.dart';
 import 'package:ksk_group/features/authorization/presentation/sign_up/sign_up_provider.dart';
 
