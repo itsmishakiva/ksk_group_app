@@ -51,6 +51,7 @@ class AppTextField extends StatelessWidget {
                   ),
           ),
           child: TextField(
+            controller: controller,
             onChanged: onChanged,
             obscureText: obscureText,
             cursorWidth: 1.0,

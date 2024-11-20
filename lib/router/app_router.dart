@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:ksk_group/features/authorization/presentation/auth_root_route.dart';
-import 'package:ksk_group/features/authorization/presentation/login/login_provider.dart';
-import 'package:ksk_group/features/authorization/presentation/login/login_screen.dart';
+import 'package:ksk_group/features/authorization/presentation/sign_in/sign_in_provider.dart';
 import 'package:ksk_group/features/authorization/presentation/sign_up/sign_up_provider.dart';
 
 part 'app_router.gr.dart';
@@ -20,8 +19,8 @@ class AppRouter extends RootStackRouter {
           children: [
             AutoRoute(
               initial: true,
-              path: 'login',
-              page: LoginRoute.page,
+              path: 'sign_in',
+              page: SignInRoute.page,
             ),
             AutoRoute(
               path: 'sign_up',

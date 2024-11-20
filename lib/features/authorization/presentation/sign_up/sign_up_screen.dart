@@ -13,8 +13,24 @@ import 'package:ksk_group/router/app_router.dart';
 
 part 'widgets/sign_in_button.dart';
 
-class SignUpScreen extends StatelessWidget {
+class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
+
+  @override
+  State<SignUpScreen> createState() => _SignUpScreenState();
+}
+
+class _SignUpScreenState extends State<SignUpScreen> {
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _repeatPasswordController =
+      TextEditingController();
+
+  @override
+  void dispose() {
+    _passwordController.dispose();
+    _repeatPasswordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +82,11 @@ class SignUpScreen extends StatelessWidget {
                 const SizedBox(height: 18.0),
                 BlocBuilder<SignUpBloc, SignUpState>(
                   builder: (context, state) {
+                    if (_passwordController.text != state.password) {
+                      _passwordController.text = state.password;
+                    }
                     return AppTextField(
+                      controller: _passwordController,
                       label: 'Ваш пароль',
                       hint: 'Введите пароль',
                       errorMessage: state is SignUpStateError
@@ -86,7 +106,12 @@ class SignUpScreen extends StatelessWidget {
                 const SizedBox(height: 18.0),
                 BlocBuilder<SignUpBloc, SignUpState>(
                   builder: (context, state) {
+                    if (_repeatPasswordController.text !=
+                        state.passwordRepeat) {
+                      _repeatPasswordController.text = state.passwordRepeat;
+                    }
                     return AppTextField(
+                      controller: _repeatPasswordController,
                       label: 'Повторите пароль',
                       hint: 'Введите пароль еще раз',
                       errorMessage: state is SignUpStateError

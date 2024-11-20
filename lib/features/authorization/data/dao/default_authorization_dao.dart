@@ -1,10 +1,9 @@
-// ignore_for_file: unused_local_variable
-
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:ksk_group/features/authorization/data/dao/authorization_dao.dart';
-import 'package:ksk_group/features/authorization/data/dto/sign_up_dto.dart';
+import 'package:ksk_group/features/authorization/data/dto/sign_in_dto/sign_in_dto.dart';
+import 'package:ksk_group/features/authorization/data/dto/sign_up_dto/sign_up_dto.dart';
 
 class DefaultAuthorizationDao implements AuthorizationDao {
   final Dio _dio;
@@ -17,7 +16,7 @@ class DefaultAuthorizationDao implements AuthorizationDao {
   Future<void> signUp({
     required SignUpDto signUpData,
   }) async {
-    final response = await _dio.post(
+    await _dio.post(
       'api/auth/reg',
       data: jsonEncode(
         signUpData.toJson(),
@@ -26,11 +25,13 @@ class DefaultAuthorizationDao implements AuthorizationDao {
   }
 
   @override
-  Future<void> logIn({required SignUpDto signUpData}) async {
-    final response = await _dio.post(
+  Future<void> signIn({
+    required SignInDto signInData,
+  }) async {
+    await _dio.post(
       'api/auth/signIn',
       data: jsonEncode(
-        signUpData.toJson(),
+        signInData.toJson(),
       ),
     );
   }

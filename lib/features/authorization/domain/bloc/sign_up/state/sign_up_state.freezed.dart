@@ -25,69 +25,69 @@ mixin _$SignUpState {
             String email, String password, String passwordRepeat)
         data,
     required TResult Function(
+            String email, String password, String passwordRepeat)
+        loading,
+    required TResult Function(
+            String email, String password, String passwordRepeat)
+        success,
+    required TResult Function(
             String email,
             String password,
             String passwordRepeat,
             String? passwordsErrorMessage,
             String? emailErrorMessage)
         error,
-    required TResult Function(
-            String email, String password, String passwordRepeat)
-        loading,
-    required TResult Function(
-            String email, String password, String passwordRepeat)
-        success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String email, String password, String passwordRepeat)?
         data,
-    TResult? Function(String email, String password, String passwordRepeat,
-            String? passwordsErrorMessage, String? emailErrorMessage)?
-        error,
     TResult? Function(String email, String password, String passwordRepeat)?
         loading,
     TResult? Function(String email, String password, String passwordRepeat)?
         success,
+    TResult? Function(String email, String password, String passwordRepeat,
+            String? passwordsErrorMessage, String? emailErrorMessage)?
+        error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String email, String password, String passwordRepeat)?
         data,
-    TResult Function(String email, String password, String passwordRepeat,
-            String? passwordsErrorMessage, String? emailErrorMessage)?
-        error,
     TResult Function(String email, String password, String passwordRepeat)?
         loading,
     TResult Function(String email, String password, String passwordRepeat)?
         success,
+    TResult Function(String email, String password, String passwordRepeat,
+            String? passwordsErrorMessage, String? emailErrorMessage)?
+        error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SignUpStateData value) data,
-    required TResult Function(SignUpStateError value) error,
     required TResult Function(SignUpStateLoading value) loading,
     required TResult Function(SignUpStateSuccess value) success,
+    required TResult Function(SignUpStateError value) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(SignUpStateData value)? data,
-    TResult? Function(SignUpStateError value)? error,
     TResult? Function(SignUpStateLoading value)? loading,
     TResult? Function(SignUpStateSuccess value)? success,
+    TResult? Function(SignUpStateError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignUpStateData value)? data,
-    TResult Function(SignUpStateError value)? error,
     TResult Function(SignUpStateLoading value)? loading,
     TResult Function(SignUpStateSuccess value)? success,
+    TResult Function(SignUpStateError value)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -232,18 +232,18 @@ class _$SignUpStateDataImpl implements SignUpStateData {
             String email, String password, String passwordRepeat)
         data,
     required TResult Function(
+            String email, String password, String passwordRepeat)
+        loading,
+    required TResult Function(
+            String email, String password, String passwordRepeat)
+        success,
+    required TResult Function(
             String email,
             String password,
             String passwordRepeat,
             String? passwordsErrorMessage,
             String? emailErrorMessage)
         error,
-    required TResult Function(
-            String email, String password, String passwordRepeat)
-        loading,
-    required TResult Function(
-            String email, String password, String passwordRepeat)
-        success,
   }) {
     return data(email, password, passwordRepeat);
   }
@@ -253,13 +253,13 @@ class _$SignUpStateDataImpl implements SignUpStateData {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String email, String password, String passwordRepeat)?
         data,
-    TResult? Function(String email, String password, String passwordRepeat,
-            String? passwordsErrorMessage, String? emailErrorMessage)?
-        error,
     TResult? Function(String email, String password, String passwordRepeat)?
         loading,
     TResult? Function(String email, String password, String passwordRepeat)?
         success,
+    TResult? Function(String email, String password, String passwordRepeat,
+            String? passwordsErrorMessage, String? emailErrorMessage)?
+        error,
   }) {
     return data?.call(email, password, passwordRepeat);
   }
@@ -269,13 +269,13 @@ class _$SignUpStateDataImpl implements SignUpStateData {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String email, String password, String passwordRepeat)?
         data,
-    TResult Function(String email, String password, String passwordRepeat,
-            String? passwordsErrorMessage, String? emailErrorMessage)?
-        error,
     TResult Function(String email, String password, String passwordRepeat)?
         loading,
     TResult Function(String email, String password, String passwordRepeat)?
         success,
+    TResult Function(String email, String password, String passwordRepeat,
+            String? passwordsErrorMessage, String? emailErrorMessage)?
+        error,
     required TResult orElse(),
   }) {
     if (data != null) {
@@ -288,9 +288,9 @@ class _$SignUpStateDataImpl implements SignUpStateData {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SignUpStateData value) data,
-    required TResult Function(SignUpStateError value) error,
     required TResult Function(SignUpStateLoading value) loading,
     required TResult Function(SignUpStateSuccess value) success,
+    required TResult Function(SignUpStateError value) error,
   }) {
     return data(this);
   }
@@ -299,9 +299,9 @@ class _$SignUpStateDataImpl implements SignUpStateData {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(SignUpStateData value)? data,
-    TResult? Function(SignUpStateError value)? error,
     TResult? Function(SignUpStateLoading value)? loading,
     TResult? Function(SignUpStateSuccess value)? success,
+    TResult? Function(SignUpStateError value)? error,
   }) {
     return data?.call(this);
   }
@@ -310,9 +310,9 @@ class _$SignUpStateDataImpl implements SignUpStateData {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignUpStateData value)? data,
-    TResult Function(SignUpStateError value)? error,
     TResult Function(SignUpStateLoading value)? loading,
     TResult Function(SignUpStateSuccess value)? success,
+    TResult Function(SignUpStateError value)? error,
     required TResult orElse(),
   }) {
     if (data != null) {
@@ -337,6 +337,406 @@ abstract class SignUpStateData implements SignUpState {
   @override
   @JsonKey(ignore: true)
   _$$SignUpStateDataImplCopyWith<_$SignUpStateDataImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SignUpStateLoadingImplCopyWith<$Res>
+    implements $SignUpStateCopyWith<$Res> {
+  factory _$$SignUpStateLoadingImplCopyWith(_$SignUpStateLoadingImpl value,
+          $Res Function(_$SignUpStateLoadingImpl) then) =
+      __$$SignUpStateLoadingImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String email, String password, String passwordRepeat});
+}
+
+/// @nodoc
+class __$$SignUpStateLoadingImplCopyWithImpl<$Res>
+    extends _$SignUpStateCopyWithImpl<$Res, _$SignUpStateLoadingImpl>
+    implements _$$SignUpStateLoadingImplCopyWith<$Res> {
+  __$$SignUpStateLoadingImplCopyWithImpl(_$SignUpStateLoadingImpl _value,
+      $Res Function(_$SignUpStateLoadingImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? email = null,
+    Object? password = null,
+    Object? passwordRepeat = null,
+  }) {
+    return _then(_$SignUpStateLoadingImpl(
+      email: null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: null == password
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+      passwordRepeat: null == passwordRepeat
+          ? _value.passwordRepeat
+          : passwordRepeat // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SignUpStateLoadingImpl implements SignUpStateLoading {
+  const _$SignUpStateLoadingImpl(
+      {required this.email,
+      required this.password,
+      required this.passwordRepeat});
+
+  @override
+  final String email;
+  @override
+  final String password;
+  @override
+  final String passwordRepeat;
+
+  @override
+  String toString() {
+    return 'SignUpState.loading(email: $email, password: $password, passwordRepeat: $passwordRepeat)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SignUpStateLoadingImpl &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.password, password) ||
+                other.password == password) &&
+            (identical(other.passwordRepeat, passwordRepeat) ||
+                other.passwordRepeat == passwordRepeat));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, email, password, passwordRepeat);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SignUpStateLoadingImplCopyWith<_$SignUpStateLoadingImpl> get copyWith =>
+      __$$SignUpStateLoadingImplCopyWithImpl<_$SignUpStateLoadingImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            String email, String password, String passwordRepeat)
+        data,
+    required TResult Function(
+            String email, String password, String passwordRepeat)
+        loading,
+    required TResult Function(
+            String email, String password, String passwordRepeat)
+        success,
+    required TResult Function(
+            String email,
+            String password,
+            String passwordRepeat,
+            String? passwordsErrorMessage,
+            String? emailErrorMessage)
+        error,
+  }) {
+    return loading(email, password, passwordRepeat);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String email, String password, String passwordRepeat)?
+        data,
+    TResult? Function(String email, String password, String passwordRepeat)?
+        loading,
+    TResult? Function(String email, String password, String passwordRepeat)?
+        success,
+    TResult? Function(String email, String password, String passwordRepeat,
+            String? passwordsErrorMessage, String? emailErrorMessage)?
+        error,
+  }) {
+    return loading?.call(email, password, passwordRepeat);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String email, String password, String passwordRepeat)?
+        data,
+    TResult Function(String email, String password, String passwordRepeat)?
+        loading,
+    TResult Function(String email, String password, String passwordRepeat)?
+        success,
+    TResult Function(String email, String password, String passwordRepeat,
+            String? passwordsErrorMessage, String? emailErrorMessage)?
+        error,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading(email, password, passwordRepeat);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SignUpStateData value) data,
+    required TResult Function(SignUpStateLoading value) loading,
+    required TResult Function(SignUpStateSuccess value) success,
+    required TResult Function(SignUpStateError value) error,
+  }) {
+    return loading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(SignUpStateData value)? data,
+    TResult? Function(SignUpStateLoading value)? loading,
+    TResult? Function(SignUpStateSuccess value)? success,
+    TResult? Function(SignUpStateError value)? error,
+  }) {
+    return loading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SignUpStateData value)? data,
+    TResult Function(SignUpStateLoading value)? loading,
+    TResult Function(SignUpStateSuccess value)? success,
+    TResult Function(SignUpStateError value)? error,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignUpStateLoading implements SignUpState {
+  const factory SignUpStateLoading(
+      {required final String email,
+      required final String password,
+      required final String passwordRepeat}) = _$SignUpStateLoadingImpl;
+
+  @override
+  String get email;
+  @override
+  String get password;
+  @override
+  String get passwordRepeat;
+  @override
+  @JsonKey(ignore: true)
+  _$$SignUpStateLoadingImplCopyWith<_$SignUpStateLoadingImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SignUpStateSuccessImplCopyWith<$Res>
+    implements $SignUpStateCopyWith<$Res> {
+  factory _$$SignUpStateSuccessImplCopyWith(_$SignUpStateSuccessImpl value,
+          $Res Function(_$SignUpStateSuccessImpl) then) =
+      __$$SignUpStateSuccessImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String email, String password, String passwordRepeat});
+}
+
+/// @nodoc
+class __$$SignUpStateSuccessImplCopyWithImpl<$Res>
+    extends _$SignUpStateCopyWithImpl<$Res, _$SignUpStateSuccessImpl>
+    implements _$$SignUpStateSuccessImplCopyWith<$Res> {
+  __$$SignUpStateSuccessImplCopyWithImpl(_$SignUpStateSuccessImpl _value,
+      $Res Function(_$SignUpStateSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? email = null,
+    Object? password = null,
+    Object? passwordRepeat = null,
+  }) {
+    return _then(_$SignUpStateSuccessImpl(
+      email: null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: null == password
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+      passwordRepeat: null == passwordRepeat
+          ? _value.passwordRepeat
+          : passwordRepeat // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SignUpStateSuccessImpl implements SignUpStateSuccess {
+  const _$SignUpStateSuccessImpl(
+      {required this.email,
+      required this.password,
+      required this.passwordRepeat});
+
+  @override
+  final String email;
+  @override
+  final String password;
+  @override
+  final String passwordRepeat;
+
+  @override
+  String toString() {
+    return 'SignUpState.success(email: $email, password: $password, passwordRepeat: $passwordRepeat)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SignUpStateSuccessImpl &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.password, password) ||
+                other.password == password) &&
+            (identical(other.passwordRepeat, passwordRepeat) ||
+                other.passwordRepeat == passwordRepeat));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, email, password, passwordRepeat);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SignUpStateSuccessImplCopyWith<_$SignUpStateSuccessImpl> get copyWith =>
+      __$$SignUpStateSuccessImplCopyWithImpl<_$SignUpStateSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            String email, String password, String passwordRepeat)
+        data,
+    required TResult Function(
+            String email, String password, String passwordRepeat)
+        loading,
+    required TResult Function(
+            String email, String password, String passwordRepeat)
+        success,
+    required TResult Function(
+            String email,
+            String password,
+            String passwordRepeat,
+            String? passwordsErrorMessage,
+            String? emailErrorMessage)
+        error,
+  }) {
+    return success(email, password, passwordRepeat);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String email, String password, String passwordRepeat)?
+        data,
+    TResult? Function(String email, String password, String passwordRepeat)?
+        loading,
+    TResult? Function(String email, String password, String passwordRepeat)?
+        success,
+    TResult? Function(String email, String password, String passwordRepeat,
+            String? passwordsErrorMessage, String? emailErrorMessage)?
+        error,
+  }) {
+    return success?.call(email, password, passwordRepeat);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String email, String password, String passwordRepeat)?
+        data,
+    TResult Function(String email, String password, String passwordRepeat)?
+        loading,
+    TResult Function(String email, String password, String passwordRepeat)?
+        success,
+    TResult Function(String email, String password, String passwordRepeat,
+            String? passwordsErrorMessage, String? emailErrorMessage)?
+        error,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(email, password, passwordRepeat);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SignUpStateData value) data,
+    required TResult Function(SignUpStateLoading value) loading,
+    required TResult Function(SignUpStateSuccess value) success,
+    required TResult Function(SignUpStateError value) error,
+  }) {
+    return success(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(SignUpStateData value)? data,
+    TResult? Function(SignUpStateLoading value)? loading,
+    TResult? Function(SignUpStateSuccess value)? success,
+    TResult? Function(SignUpStateError value)? error,
+  }) {
+    return success?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SignUpStateData value)? data,
+    TResult Function(SignUpStateLoading value)? loading,
+    TResult Function(SignUpStateSuccess value)? success,
+    TResult Function(SignUpStateError value)? error,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignUpStateSuccess implements SignUpState {
+  const factory SignUpStateSuccess(
+      {required final String email,
+      required final String password,
+      required final String passwordRepeat}) = _$SignUpStateSuccessImpl;
+
+  @override
+  String get email;
+  @override
+  String get password;
+  @override
+  String get passwordRepeat;
+  @override
+  @JsonKey(ignore: true)
+  _$$SignUpStateSuccessImplCopyWith<_$SignUpStateSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -458,18 +858,18 @@ class _$SignUpStateErrorImpl implements SignUpStateError {
             String email, String password, String passwordRepeat)
         data,
     required TResult Function(
+            String email, String password, String passwordRepeat)
+        loading,
+    required TResult Function(
+            String email, String password, String passwordRepeat)
+        success,
+    required TResult Function(
             String email,
             String password,
             String passwordRepeat,
             String? passwordsErrorMessage,
             String? emailErrorMessage)
         error,
-    required TResult Function(
-            String email, String password, String passwordRepeat)
-        loading,
-    required TResult Function(
-            String email, String password, String passwordRepeat)
-        success,
   }) {
     return error(email, password, passwordRepeat, passwordsErrorMessage,
         emailErrorMessage);
@@ -480,13 +880,13 @@ class _$SignUpStateErrorImpl implements SignUpStateError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String email, String password, String passwordRepeat)?
         data,
-    TResult? Function(String email, String password, String passwordRepeat,
-            String? passwordsErrorMessage, String? emailErrorMessage)?
-        error,
     TResult? Function(String email, String password, String passwordRepeat)?
         loading,
     TResult? Function(String email, String password, String passwordRepeat)?
         success,
+    TResult? Function(String email, String password, String passwordRepeat,
+            String? passwordsErrorMessage, String? emailErrorMessage)?
+        error,
   }) {
     return error?.call(email, password, passwordRepeat, passwordsErrorMessage,
         emailErrorMessage);
@@ -497,13 +897,13 @@ class _$SignUpStateErrorImpl implements SignUpStateError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String email, String password, String passwordRepeat)?
         data,
-    TResult Function(String email, String password, String passwordRepeat,
-            String? passwordsErrorMessage, String? emailErrorMessage)?
-        error,
     TResult Function(String email, String password, String passwordRepeat)?
         loading,
     TResult Function(String email, String password, String passwordRepeat)?
         success,
+    TResult Function(String email, String password, String passwordRepeat,
+            String? passwordsErrorMessage, String? emailErrorMessage)?
+        error,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -517,9 +917,9 @@ class _$SignUpStateErrorImpl implements SignUpStateError {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SignUpStateData value) data,
-    required TResult Function(SignUpStateError value) error,
     required TResult Function(SignUpStateLoading value) loading,
     required TResult Function(SignUpStateSuccess value) success,
+    required TResult Function(SignUpStateError value) error,
   }) {
     return error(this);
   }
@@ -528,9 +928,9 @@ class _$SignUpStateErrorImpl implements SignUpStateError {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(SignUpStateData value)? data,
-    TResult? Function(SignUpStateError value)? error,
     TResult? Function(SignUpStateLoading value)? loading,
     TResult? Function(SignUpStateSuccess value)? success,
+    TResult? Function(SignUpStateError value)? error,
   }) {
     return error?.call(this);
   }
@@ -539,9 +939,9 @@ class _$SignUpStateErrorImpl implements SignUpStateError {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignUpStateData value)? data,
-    TResult Function(SignUpStateError value)? error,
     TResult Function(SignUpStateLoading value)? loading,
     TResult Function(SignUpStateSuccess value)? success,
+    TResult Function(SignUpStateError value)? error,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -570,405 +970,5 @@ abstract class SignUpStateError implements SignUpState {
   @override
   @JsonKey(ignore: true)
   _$$SignUpStateErrorImplCopyWith<_$SignUpStateErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$SignUpStateLoadingImplCopyWith<$Res>
-    implements $SignUpStateCopyWith<$Res> {
-  factory _$$SignUpStateLoadingImplCopyWith(_$SignUpStateLoadingImpl value,
-          $Res Function(_$SignUpStateLoadingImpl) then) =
-      __$$SignUpStateLoadingImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String email, String password, String passwordRepeat});
-}
-
-/// @nodoc
-class __$$SignUpStateLoadingImplCopyWithImpl<$Res>
-    extends _$SignUpStateCopyWithImpl<$Res, _$SignUpStateLoadingImpl>
-    implements _$$SignUpStateLoadingImplCopyWith<$Res> {
-  __$$SignUpStateLoadingImplCopyWithImpl(_$SignUpStateLoadingImpl _value,
-      $Res Function(_$SignUpStateLoadingImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? email = null,
-    Object? password = null,
-    Object? passwordRepeat = null,
-  }) {
-    return _then(_$SignUpStateLoadingImpl(
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
-      passwordRepeat: null == passwordRepeat
-          ? _value.passwordRepeat
-          : passwordRepeat // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$SignUpStateLoadingImpl implements SignUpStateLoading {
-  const _$SignUpStateLoadingImpl(
-      {required this.email,
-      required this.password,
-      required this.passwordRepeat});
-
-  @override
-  final String email;
-  @override
-  final String password;
-  @override
-  final String passwordRepeat;
-
-  @override
-  String toString() {
-    return 'SignUpState.loading(email: $email, password: $password, passwordRepeat: $passwordRepeat)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SignUpStateLoadingImpl &&
-            (identical(other.email, email) || other.email == email) &&
-            (identical(other.password, password) ||
-                other.password == password) &&
-            (identical(other.passwordRepeat, passwordRepeat) ||
-                other.passwordRepeat == passwordRepeat));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, email, password, passwordRepeat);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SignUpStateLoadingImplCopyWith<_$SignUpStateLoadingImpl> get copyWith =>
-      __$$SignUpStateLoadingImplCopyWithImpl<_$SignUpStateLoadingImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            String email, String password, String passwordRepeat)
-        data,
-    required TResult Function(
-            String email,
-            String password,
-            String passwordRepeat,
-            String? passwordsErrorMessage,
-            String? emailErrorMessage)
-        error,
-    required TResult Function(
-            String email, String password, String passwordRepeat)
-        loading,
-    required TResult Function(
-            String email, String password, String passwordRepeat)
-        success,
-  }) {
-    return loading(email, password, passwordRepeat);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String email, String password, String passwordRepeat)?
-        data,
-    TResult? Function(String email, String password, String passwordRepeat,
-            String? passwordsErrorMessage, String? emailErrorMessage)?
-        error,
-    TResult? Function(String email, String password, String passwordRepeat)?
-        loading,
-    TResult? Function(String email, String password, String passwordRepeat)?
-        success,
-  }) {
-    return loading?.call(email, password, passwordRepeat);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String email, String password, String passwordRepeat)?
-        data,
-    TResult Function(String email, String password, String passwordRepeat,
-            String? passwordsErrorMessage, String? emailErrorMessage)?
-        error,
-    TResult Function(String email, String password, String passwordRepeat)?
-        loading,
-    TResult Function(String email, String password, String passwordRepeat)?
-        success,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading(email, password, passwordRepeat);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(SignUpStateData value) data,
-    required TResult Function(SignUpStateError value) error,
-    required TResult Function(SignUpStateLoading value) loading,
-    required TResult Function(SignUpStateSuccess value) success,
-  }) {
-    return loading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SignUpStateData value)? data,
-    TResult? Function(SignUpStateError value)? error,
-    TResult? Function(SignUpStateLoading value)? loading,
-    TResult? Function(SignUpStateSuccess value)? success,
-  }) {
-    return loading?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(SignUpStateData value)? data,
-    TResult Function(SignUpStateError value)? error,
-    TResult Function(SignUpStateLoading value)? loading,
-    TResult Function(SignUpStateSuccess value)? success,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SignUpStateLoading implements SignUpState {
-  const factory SignUpStateLoading(
-      {required final String email,
-      required final String password,
-      required final String passwordRepeat}) = _$SignUpStateLoadingImpl;
-
-  @override
-  String get email;
-  @override
-  String get password;
-  @override
-  String get passwordRepeat;
-  @override
-  @JsonKey(ignore: true)
-  _$$SignUpStateLoadingImplCopyWith<_$SignUpStateLoadingImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$SignUpStateSuccessImplCopyWith<$Res>
-    implements $SignUpStateCopyWith<$Res> {
-  factory _$$SignUpStateSuccessImplCopyWith(_$SignUpStateSuccessImpl value,
-          $Res Function(_$SignUpStateSuccessImpl) then) =
-      __$$SignUpStateSuccessImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String email, String password, String passwordRepeat});
-}
-
-/// @nodoc
-class __$$SignUpStateSuccessImplCopyWithImpl<$Res>
-    extends _$SignUpStateCopyWithImpl<$Res, _$SignUpStateSuccessImpl>
-    implements _$$SignUpStateSuccessImplCopyWith<$Res> {
-  __$$SignUpStateSuccessImplCopyWithImpl(_$SignUpStateSuccessImpl _value,
-      $Res Function(_$SignUpStateSuccessImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? email = null,
-    Object? password = null,
-    Object? passwordRepeat = null,
-  }) {
-    return _then(_$SignUpStateSuccessImpl(
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
-      passwordRepeat: null == passwordRepeat
-          ? _value.passwordRepeat
-          : passwordRepeat // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$SignUpStateSuccessImpl implements SignUpStateSuccess {
-  const _$SignUpStateSuccessImpl(
-      {required this.email,
-      required this.password,
-      required this.passwordRepeat});
-
-  @override
-  final String email;
-  @override
-  final String password;
-  @override
-  final String passwordRepeat;
-
-  @override
-  String toString() {
-    return 'SignUpState.success(email: $email, password: $password, passwordRepeat: $passwordRepeat)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SignUpStateSuccessImpl &&
-            (identical(other.email, email) || other.email == email) &&
-            (identical(other.password, password) ||
-                other.password == password) &&
-            (identical(other.passwordRepeat, passwordRepeat) ||
-                other.passwordRepeat == passwordRepeat));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, email, password, passwordRepeat);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SignUpStateSuccessImplCopyWith<_$SignUpStateSuccessImpl> get copyWith =>
-      __$$SignUpStateSuccessImplCopyWithImpl<_$SignUpStateSuccessImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            String email, String password, String passwordRepeat)
-        data,
-    required TResult Function(
-            String email,
-            String password,
-            String passwordRepeat,
-            String? passwordsErrorMessage,
-            String? emailErrorMessage)
-        error,
-    required TResult Function(
-            String email, String password, String passwordRepeat)
-        loading,
-    required TResult Function(
-            String email, String password, String passwordRepeat)
-        success,
-  }) {
-    return success(email, password, passwordRepeat);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String email, String password, String passwordRepeat)?
-        data,
-    TResult? Function(String email, String password, String passwordRepeat,
-            String? passwordsErrorMessage, String? emailErrorMessage)?
-        error,
-    TResult? Function(String email, String password, String passwordRepeat)?
-        loading,
-    TResult? Function(String email, String password, String passwordRepeat)?
-        success,
-  }) {
-    return success?.call(email, password, passwordRepeat);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String email, String password, String passwordRepeat)?
-        data,
-    TResult Function(String email, String password, String passwordRepeat,
-            String? passwordsErrorMessage, String? emailErrorMessage)?
-        error,
-    TResult Function(String email, String password, String passwordRepeat)?
-        loading,
-    TResult Function(String email, String password, String passwordRepeat)?
-        success,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(email, password, passwordRepeat);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(SignUpStateData value) data,
-    required TResult Function(SignUpStateError value) error,
-    required TResult Function(SignUpStateLoading value) loading,
-    required TResult Function(SignUpStateSuccess value) success,
-  }) {
-    return success(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SignUpStateData value)? data,
-    TResult? Function(SignUpStateError value)? error,
-    TResult? Function(SignUpStateLoading value)? loading,
-    TResult? Function(SignUpStateSuccess value)? success,
-  }) {
-    return success?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(SignUpStateData value)? data,
-    TResult Function(SignUpStateError value)? error,
-    TResult Function(SignUpStateLoading value)? loading,
-    TResult Function(SignUpStateSuccess value)? success,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SignUpStateSuccess implements SignUpState {
-  const factory SignUpStateSuccess(
-      {required final String email,
-      required final String password,
-      required final String passwordRepeat}) = _$SignUpStateSuccessImpl;
-
-  @override
-  String get email;
-  @override
-  String get password;
-  @override
-  String get passwordRepeat;
-  @override
-  @JsonKey(ignore: true)
-  _$$SignUpStateSuccessImplCopyWith<_$SignUpStateSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

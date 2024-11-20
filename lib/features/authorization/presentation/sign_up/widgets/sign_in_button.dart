@@ -7,7 +7,7 @@ class _SignInButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.router.replace(const LoginRoute());
+        context.router.replace(const SignInRoute());
       },
       child: Material(
         color: Colors.transparent,

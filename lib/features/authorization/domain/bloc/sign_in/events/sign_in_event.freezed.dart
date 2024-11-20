@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'login_event.dart';
+part of 'sign_in_event.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$LoginEvent {
+mixin _$SignInEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() proceed,
@@ -37,36 +37,36 @@ mixin _$LoginEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(LoginEventProceed value) proceed,
-    required TResult Function(LoginEventUpdateParams value) updateParams,
+    required TResult Function(SignInEventProceed value) proceed,
+    required TResult Function(SignInEventUpdateParams value) updateParams,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(LoginEventProceed value)? proceed,
-    TResult? Function(LoginEventUpdateParams value)? updateParams,
+    TResult? Function(SignInEventProceed value)? proceed,
+    TResult? Function(SignInEventUpdateParams value)? updateParams,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(LoginEventProceed value)? proceed,
-    TResult Function(LoginEventUpdateParams value)? updateParams,
+    TResult Function(SignInEventProceed value)? proceed,
+    TResult Function(SignInEventUpdateParams value)? updateParams,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LoginEventCopyWith<$Res> {
-  factory $LoginEventCopyWith(
-          LoginEvent value, $Res Function(LoginEvent) then) =
-      _$LoginEventCopyWithImpl<$Res, LoginEvent>;
+abstract class $SignInEventCopyWith<$Res> {
+  factory $SignInEventCopyWith(
+          SignInEvent value, $Res Function(SignInEvent) then) =
+      _$SignInEventCopyWithImpl<$Res, SignInEvent>;
 }
 
 /// @nodoc
-class _$LoginEventCopyWithImpl<$Res, $Val extends LoginEvent>
-    implements $LoginEventCopyWith<$Res> {
-  _$LoginEventCopyWithImpl(this._value, this._then);
+class _$SignInEventCopyWithImpl<$Res, $Val extends SignInEvent>
+    implements $SignInEventCopyWith<$Res> {
+  _$SignInEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -75,35 +75,35 @@ class _$LoginEventCopyWithImpl<$Res, $Val extends LoginEvent>
 }
 
 /// @nodoc
-abstract class _$$LoginEventProceedImplCopyWith<$Res> {
-  factory _$$LoginEventProceedImplCopyWith(_$LoginEventProceedImpl value,
-          $Res Function(_$LoginEventProceedImpl) then) =
-      __$$LoginEventProceedImplCopyWithImpl<$Res>;
+abstract class _$$SignInEventProceedImplCopyWith<$Res> {
+  factory _$$SignInEventProceedImplCopyWith(_$SignInEventProceedImpl value,
+          $Res Function(_$SignInEventProceedImpl) then) =
+      __$$SignInEventProceedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoginEventProceedImplCopyWithImpl<$Res>
-    extends _$LoginEventCopyWithImpl<$Res, _$LoginEventProceedImpl>
-    implements _$$LoginEventProceedImplCopyWith<$Res> {
-  __$$LoginEventProceedImplCopyWithImpl(_$LoginEventProceedImpl _value,
-      $Res Function(_$LoginEventProceedImpl) _then)
+class __$$SignInEventProceedImplCopyWithImpl<$Res>
+    extends _$SignInEventCopyWithImpl<$Res, _$SignInEventProceedImpl>
+    implements _$$SignInEventProceedImplCopyWith<$Res> {
+  __$$SignInEventProceedImplCopyWithImpl(_$SignInEventProceedImpl _value,
+      $Res Function(_$SignInEventProceedImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LoginEventProceedImpl implements LoginEventProceed {
-  const _$LoginEventProceedImpl();
+class _$SignInEventProceedImpl implements SignInEventProceed {
+  const _$SignInEventProceedImpl();
 
   @override
   String toString() {
-    return 'LoginEvent.proceed()';
+    return 'SignInEvent.proceed()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoginEventProceedImpl);
+        (other.runtimeType == runtimeType && other is _$SignInEventProceedImpl);
   }
 
   @override
@@ -143,8 +143,8 @@ class _$LoginEventProceedImpl implements LoginEventProceed {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(LoginEventProceed value) proceed,
-    required TResult Function(LoginEventUpdateParams value) updateParams,
+    required TResult Function(SignInEventProceed value) proceed,
+    required TResult Function(SignInEventUpdateParams value) updateParams,
   }) {
     return proceed(this);
   }
@@ -152,8 +152,8 @@ class _$LoginEventProceedImpl implements LoginEventProceed {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(LoginEventProceed value)? proceed,
-    TResult? Function(LoginEventUpdateParams value)? updateParams,
+    TResult? Function(SignInEventProceed value)? proceed,
+    TResult? Function(SignInEventUpdateParams value)? updateParams,
   }) {
     return proceed?.call(this);
   }
@@ -161,8 +161,8 @@ class _$LoginEventProceedImpl implements LoginEventProceed {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(LoginEventProceed value)? proceed,
-    TResult Function(LoginEventUpdateParams value)? updateParams,
+    TResult Function(SignInEventProceed value)? proceed,
+    TResult Function(SignInEventUpdateParams value)? updateParams,
     required TResult orElse(),
   }) {
     if (proceed != null) {
@@ -172,27 +172,27 @@ class _$LoginEventProceedImpl implements LoginEventProceed {
   }
 }
 
-abstract class LoginEventProceed implements LoginEvent {
-  const factory LoginEventProceed() = _$LoginEventProceedImpl;
+abstract class SignInEventProceed implements SignInEvent {
+  const factory SignInEventProceed() = _$SignInEventProceedImpl;
 }
 
 /// @nodoc
-abstract class _$$LoginEventUpdateParamsImplCopyWith<$Res> {
-  factory _$$LoginEventUpdateParamsImplCopyWith(
-          _$LoginEventUpdateParamsImpl value,
-          $Res Function(_$LoginEventUpdateParamsImpl) then) =
-      __$$LoginEventUpdateParamsImplCopyWithImpl<$Res>;
+abstract class _$$SignInEventUpdateParamsImplCopyWith<$Res> {
+  factory _$$SignInEventUpdateParamsImplCopyWith(
+          _$SignInEventUpdateParamsImpl value,
+          $Res Function(_$SignInEventUpdateParamsImpl) then) =
+      __$$SignInEventUpdateParamsImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String? email, String? password});
 }
 
 /// @nodoc
-class __$$LoginEventUpdateParamsImplCopyWithImpl<$Res>
-    extends _$LoginEventCopyWithImpl<$Res, _$LoginEventUpdateParamsImpl>
-    implements _$$LoginEventUpdateParamsImplCopyWith<$Res> {
-  __$$LoginEventUpdateParamsImplCopyWithImpl(
-      _$LoginEventUpdateParamsImpl _value,
-      $Res Function(_$LoginEventUpdateParamsImpl) _then)
+class __$$SignInEventUpdateParamsImplCopyWithImpl<$Res>
+    extends _$SignInEventCopyWithImpl<$Res, _$SignInEventUpdateParamsImpl>
+    implements _$$SignInEventUpdateParamsImplCopyWith<$Res> {
+  __$$SignInEventUpdateParamsImplCopyWithImpl(
+      _$SignInEventUpdateParamsImpl _value,
+      $Res Function(_$SignInEventUpdateParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -201,7 +201,7 @@ class __$$LoginEventUpdateParamsImplCopyWithImpl<$Res>
     Object? email = freezed,
     Object? password = freezed,
   }) {
-    return _then(_$LoginEventUpdateParamsImpl(
+    return _then(_$SignInEventUpdateParamsImpl(
       email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -216,8 +216,8 @@ class __$$LoginEventUpdateParamsImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoginEventUpdateParamsImpl implements LoginEventUpdateParams {
-  const _$LoginEventUpdateParamsImpl({this.email, this.password});
+class _$SignInEventUpdateParamsImpl implements SignInEventUpdateParams {
+  const _$SignInEventUpdateParamsImpl({this.email, this.password});
 
   @override
   final String? email;
@@ -226,14 +226,14 @@ class _$LoginEventUpdateParamsImpl implements LoginEventUpdateParams {
 
   @override
   String toString() {
-    return 'LoginEvent.updateParams(email: $email, password: $password)';
+    return 'SignInEvent.updateParams(email: $email, password: $password)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoginEventUpdateParamsImpl &&
+            other is _$SignInEventUpdateParamsImpl &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.password, password) ||
                 other.password == password));
@@ -245,9 +245,9 @@ class _$LoginEventUpdateParamsImpl implements LoginEventUpdateParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoginEventUpdateParamsImplCopyWith<_$LoginEventUpdateParamsImpl>
-      get copyWith => __$$LoginEventUpdateParamsImplCopyWithImpl<
-          _$LoginEventUpdateParamsImpl>(this, _$identity);
+  _$$SignInEventUpdateParamsImplCopyWith<_$SignInEventUpdateParamsImpl>
+      get copyWith => __$$SignInEventUpdateParamsImplCopyWithImpl<
+          _$SignInEventUpdateParamsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -283,8 +283,8 @@ class _$LoginEventUpdateParamsImpl implements LoginEventUpdateParams {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(LoginEventProceed value) proceed,
-    required TResult Function(LoginEventUpdateParams value) updateParams,
+    required TResult Function(SignInEventProceed value) proceed,
+    required TResult Function(SignInEventUpdateParams value) updateParams,
   }) {
     return updateParams(this);
   }
@@ -292,8 +292,8 @@ class _$LoginEventUpdateParamsImpl implements LoginEventUpdateParams {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(LoginEventProceed value)? proceed,
-    TResult? Function(LoginEventUpdateParams value)? updateParams,
+    TResult? Function(SignInEventProceed value)? proceed,
+    TResult? Function(SignInEventUpdateParams value)? updateParams,
   }) {
     return updateParams?.call(this);
   }
@@ -301,8 +301,8 @@ class _$LoginEventUpdateParamsImpl implements LoginEventUpdateParams {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(LoginEventProceed value)? proceed,
-    TResult Function(LoginEventUpdateParams value)? updateParams,
+    TResult Function(SignInEventProceed value)? proceed,
+    TResult Function(SignInEventUpdateParams value)? updateParams,
     required TResult orElse(),
   }) {
     if (updateParams != null) {
@@ -312,14 +312,14 @@ class _$LoginEventUpdateParamsImpl implements LoginEventUpdateParams {
   }
 }
 
-abstract class LoginEventUpdateParams implements LoginEvent {
-  const factory LoginEventUpdateParams(
+abstract class SignInEventUpdateParams implements SignInEvent {
+  const factory SignInEventUpdateParams(
       {final String? email,
-      final String? password}) = _$LoginEventUpdateParamsImpl;
+      final String? password}) = _$SignInEventUpdateParamsImpl;
 
   String? get email;
   String? get password;
   @JsonKey(ignore: true)
-  _$$LoginEventUpdateParamsImplCopyWith<_$LoginEventUpdateParamsImpl>
+  _$$SignInEventUpdateParamsImplCopyWith<_$SignInEventUpdateParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

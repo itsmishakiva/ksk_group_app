@@ -6,16 +6,30 @@ import 'package:ksk_group/core/extensions/core_context_extension.dart';
 import 'package:ksk_group/core/widgets/app_scaffold.dart';
 import 'package:ksk_group/core/widgets/app_text_field.dart';
 import 'package:ksk_group/core/widgets/primary_text_button.dart';
-import 'package:ksk_group/features/authorization/domain/bloc/login/events/login_event.dart';
-import 'package:ksk_group/features/authorization/domain/bloc/login/login_bloc.dart';
-import 'package:ksk_group/features/authorization/domain/bloc/login/states/login_state.dart';
+import 'package:ksk_group/features/authorization/domain/bloc/sign_in/events/sign_in_event.dart';
+import 'package:ksk_group/features/authorization/domain/bloc/sign_in/sign_in_bloc.dart';
+import 'package:ksk_group/features/authorization/domain/bloc/sign_in/states/sign_in_state.dart';
 import 'package:ksk_group/router/app_router.dart';
 
 part 'widgets/forgot_password_button.dart';
+
 part 'widgets/sign_up_button.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignInScreen extends StatefulWidget {
+  const SignInScreen({super.key});
+
+  @override
+  State<SignInScreen> createState() => _SignInScreenState();
+}
+
+class _SignInScreenState extends State<SignInScreen> {
+  final TextEditingController _passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    _passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,23 +60,34 @@ class LoginScreen extends StatelessWidget {
                   style: context.textStyles.captionLarge,
                 ),
                 const SizedBox(height: 18.0),
-                const AppTextField(
+                AppTextField(
                   label: 'Ваш email',
                   hint: 'Введите email',
+                  onChanged: (value) {
+                    context.read<SignInBloc>().add(
+                          SignInEvent.updateParams(
+                            email: value,
+                          ),
+                        );
+                  },
                 ),
                 const SizedBox(height: 18.0),
-                BlocBuilder<LoginBloc, LoginState>(
+                BlocBuilder<SignInBloc, SignInState>(
                   builder: (context, state) {
+                    if (state.password != _passwordController.text) {
+                      _passwordController.text = state.password;
+                    }
                     return AppTextField(
+                      controller: _passwordController,
                       label: 'Ваш пароль',
                       hint: 'Введите пароль',
                       obscureText: true,
-                      errorMessage: state is LoginStateError
+                      errorMessage: state is SignInStateError
                           ? state.passwordErrorMessage
                           : null,
                       onChanged: (value) {
-                        context.read<LoginBloc>().add(
-                              LoginEvent.updateParams(
+                        context.read<SignInBloc>().add(
+                              SignInEvent.updateParams(
                                 password: value,
                               ),
                             );
@@ -74,18 +99,18 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(height: 10.0),
                 const _SignUpButton(),
                 const Spacer(),
-                BlocBuilder<LoginBloc, LoginState>(
+                BlocBuilder<SignInBloc, SignInState>(
                   builder: (context, state) {
                     return PrimaryTextButton(
                       text: 'Продолжить',
-                      state: state is LoginStateLoading
+                      state: state is SignInStateLoading
                           ? PrimaryTextButtonState.loading
                           : (state.email.isEmpty || state.password.isEmpty
                               ? PrimaryTextButtonState.disabled
                               : PrimaryTextButtonState.active),
                       onTap: () {
-                        context.read<LoginBloc>().add(
-                              const LoginEvent.proceed(),
+                        context.read<SignInBloc>().add(
+                              const SignInEvent.proceed(),
                             );
                       },
                     );

@@ -10,14 +10,6 @@ sealed class SignUpState with _$SignUpState {
     required String passwordRepeat,
   }) = SignUpStateData;
 
-  const factory SignUpState.error({
-    required String email,
-    required String password,
-    required String passwordRepeat,
-    String? passwordsErrorMessage,
-    String? emailErrorMessage,
-  }) = SignUpStateError;
-
   const factory SignUpState.loading({
     required String email,
     required String password,
@@ -29,4 +21,12 @@ sealed class SignUpState with _$SignUpState {
     required String password,
     required String passwordRepeat,
   }) = SignUpStateSuccess;
+
+  const factory SignUpState.error({
+    required String email,
+    required String password,
+    required String passwordRepeat,
+    String? passwordsErrorMessage,
+    String? emailErrorMessage,
+  }) = SignUpStateError;
 }

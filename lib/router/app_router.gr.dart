@@ -29,20 +29,20 @@ class AuthRootRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [LoginProvider]
-class LoginRoute extends PageRouteInfo<void> {
-  const LoginRoute({List<PageRouteInfo>? children})
+/// [SignInProvider]
+class SignInRoute extends PageRouteInfo<void> {
+  const SignInRoute({List<PageRouteInfo>? children})
       : super(
-          LoginRoute.name,
+          SignInRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'LoginRoute';
+  static const String name = 'SignInRoute';
 
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const LoginProvider();
+      return const SignInProvider();
     },
   );
 }
